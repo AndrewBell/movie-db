@@ -6,8 +6,8 @@ An example CRUD app to list, search, add, edit and delete movies.
 
 -   allows users to list, search, add, edit and delete movies
 - 	store movies to a database
--		process for ingesting that csv into the database
--		provide a frontend to perform operations on the database more easily
+-	process for ingesting that csv into the database
+-	provide a frontend to perform operations on the database more easily
 
 ## Requirements
 
@@ -17,26 +17,23 @@ An example CRUD app to list, search, add, edit and delete movies.
 
 ## Running This Project
 
-### Build
-
-`gradle build`
-
-### Test
-
-`gradle test`
-
-### Run
-
-`gradle bootRun`
-
 ### Run Docker
 
-`docker build . --tag projectname`
-
-`docker run projectname`
+`docker-compose up`
 
 ## Build Notes
 
-Here are some of the steps followed to develop
+Here are some steps followed to develop
 
 * Initialize a project scaffold, some files generated with [starter-files](https://github.com/AndrewBell/starter-files)
+* `npm init`, create stubbed endpoints, and Docker support
+
+## References
+
+* [Express Documentation and Examples](https://expressjs.com/)
+* [MySQL Docker](https://hub.docker.com/_/mysql)
+* [Dockerizing a Node.js App](https://nodejs.org/en/docs/guides/nodejs-docker-webapp/)
+
+## Tools Used
+
+* IntelliJ IDEA Ultimate
