@@ -2,12 +2,18 @@
 
 An example CRUD app to list, search, add, edit and delete movies.
 
+![Example search results](./screenshot.png)
+
 ## Goals
 
--   allows users to list, search, add, edit and delete movies
-- 	store movies to a database
+-   Allows users to list, search, add, edit and delete movies
+    -   List and Search implemented as HTTP REST endpoints
+- 	Store movies to a database
+    -   Inserting new records not yet implemented
 -	process for ingesting that csv into the database
+    -   Workaround implemented as SQL dump
 -	provide a frontend to perform operations on the database more easily
+    -   UI with search and paging supported
 
 ## Requirements
 
@@ -25,6 +31,20 @@ An example CRUD app to list, search, add, edit and delete movies.
 
 `docker-compose down`
 
+## Technologies Used
+
+* NPM
+* Node
+* Express
+* React
+* React Bootstrap
+* Axios
+* create-react-app
+* Docker
+* MySQL
+* IntelliJ IDEA Ultimate
+* DataGrip
+
 ## Developing
 
 Individual components can be started as follows:
@@ -35,7 +55,7 @@ Individual components can be started as follows:
 
 `cd /server` and `npm run dev` for starting the api
 
-`cd /web` and `npm start` for starting the web project
+`cd /web` and `npm start` for starting the web service
 
 ## Build Notes
 
@@ -65,9 +85,3 @@ Here are some steps followed to develop
 * [MySQL npm](https://www.npmjs.com/package/mysql)
 * [Dockerizing create-react-app](https://mherman.org/blog/dockerizing-a-react-app/)
 * [React Bootstrap](https://react-bootstrap.netlify.app/)
-
-## Tools Used
-
-* IntelliJ IDEA Ultimate
-* DataGrip
-* create-react-app
