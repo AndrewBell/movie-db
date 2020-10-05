@@ -38,6 +38,10 @@ Here are some steps followed to develop
 * Implement `GET /movies` to return all movies
 * Bootstrap a React project with `npm init react-app`
 * Create a simple UI that renders sample data using React Bootstrap
+* Connect UI to server to load movies
+* Add a loading spinner and basic pagination
+    * Local API response time is ~2 seconds, but the rendering time for all elements is awful
+    * Typically, a paged API response is preferable to returning all records
 
 ## References
 
