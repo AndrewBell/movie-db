@@ -1,26 +1,24 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {useState} from 'react';
 import './App.css';
+import Container from "react-bootstrap/Container";
+import NavBar from "./navbar/NavBar";
+import MovieCard from "./MovieCard/MovieCard";
+import CardColumns from "react-bootstrap/CardColumns"
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+	const [movies, setMovies] = useState([{title: "foo"}, {title: "bar"}, {title: "biz"}, {title: "baz"}, {title: "buzz"}, {title: "battle"}]);
+
+	return (
+		<React.Fragment>
+			<NavBar/>
+			<Container fluid>
+				<CardColumns>
+					{movies.map(m => <MovieCard title={m.title} key={m.title}/>)}
+				</CardColumns>
+			</Container>
+		</React.Fragment>
+	);
 }
 
 export default App;

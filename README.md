@@ -35,7 +35,9 @@ Here are some steps followed to develop
     * Ideally, would import from CSV directly, but ran into challenges
     * 16 rows failed to import due to missing record separators(?)
     * As a workaround to importing the CSV directly, `2_insert_data.sql` was created from a sql data dump after uploading CSV in DataGrip
+* Implement `GET /movies` to return all movies
 * Bootstrap a React project with `npm init react-app`
+* Create a simple UI that renders sample data using React Bootstrap
 
 ## References
 
@@ -45,6 +47,7 @@ Here are some steps followed to develop
 * [Dockerizing a Node.js App](https://nodejs.org/en/docs/guides/nodejs-docker-webapp/)
 * [MySQL npm](https://www.npmjs.com/package/mysql)
 * [Dockerizing create-react-app](https://mherman.org/blog/dockerizing-a-react-app/)
+* [React Bootstrap](https://react-bootstrap.netlify.app/)
 
 ## Tools Used
 
