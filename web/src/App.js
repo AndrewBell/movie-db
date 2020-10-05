@@ -1,5 +1,4 @@
 import React, {useEffect, useState} from "react";
-import "./App.css";
 import Container from "react-bootstrap/Container";
 import NavBar from "./NavBar/NavBar";
 import MovieCard from "./MovieCard/MovieCard";
@@ -9,24 +8,25 @@ import axios from "axios";
 import Pagination from "react-bootstrap/Pagination";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+import "./App.css";
 
 function App() {
 
 	const PAGE_SIZE = 9;
 	const [movies, setMovies] = useState([]);
 	const [page, setPage] = useState(1);
+	const [search, setSearch] = useState('');
 
 	useEffect(() => {
-		axios.get(`http://${process.env.REACT_APP_SERVER_HOST}:8080/movies`)
+		axios.get(`http://${process.env.REACT_APP_SERVER_HOST}:8080/movies${search !== '' ? '?search=' + search : ''}`)
 			.then(res => {
-				console.log("Loading movies complete");
 				setMovies(res.data);
 			})
-	}, []);
+	}, [search]);
 
 	return (
 		<React.Fragment>
-			<NavBar/>
+			<NavBar onSearch={(e) => setSearch(e)}/>
 			<Container fluid>
 				{movies.length === 0 &&
 				<div className="flex-center-content">

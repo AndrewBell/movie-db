@@ -25,6 +25,18 @@ An example CRUD app to list, search, add, edit and delete movies.
 
 `docker-compose down`
 
+## Developing
+
+Individual components can be started as follows:
+
+`docker-compose up db` to start a local mysql db
+
+`docker-compose up db server` if you just are developing web
+
+`cd /server` and `npm run dev` for starting the api
+
+`cd /web` and `npm start` for starting the web project
+
 ## Build Notes
 
 Here are some steps followed to develop
@@ -42,6 +54,7 @@ Here are some steps followed to develop
 * Add a loading spinner and basic pagination
     * Local API response time is ~2 seconds, but the rendering time for all elements is awful
     * Typically, a paged API response is preferable to returning all records
+* Add search capability
 
 ## References
 

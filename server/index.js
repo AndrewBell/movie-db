@@ -25,12 +25,29 @@ app.get('/health', async (req, res) => {
 });
 
 app.get('/movies', async (req, res) => {
-	const results = await runQuery('SELECT * FROM movies');
+
+	let query = "SELECT * FROM movies";
+
+	if (req.query.search) {
+		query = `
+			SELECT *
+			FROM movies
+			WHERE
+				title LIKE ${connection.escape(req.query.search + '%')} OR
+				origin LIKE ${connection.escape(req.query.search + '%')} OR
+				director LIKE ${connection.escape(req.query.search + '%')} OR
+				cast LIKE ${connection.escape(req.query.search + '%')} OR
+				genre LIKE ${connection.escape(req.query.search + '%')} OR
+				plot LIKE ${connection.escape(req.query.search + '%')};
+		`
+	}
+
+	const results = await runQuery(query);
 	res.send(results);
 });
 
 app.listen(port, () => {
-	console.log(`Example app listening at http://localhost:${port}`);
+	console.log(`Movies API listening at http://localhost:${port}`);
 });
 
 // Helper that wraps the query in a promise
