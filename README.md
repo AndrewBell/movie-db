@@ -27,6 +27,8 @@ An example CRUD app to list, search, add, edit and delete movies.
 
 `docker-compose up`
 
+Open [localhost:3000](http://localhost:3000/)
+
 ### Shut down Docker
 
 `docker-compose down`
