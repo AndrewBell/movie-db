@@ -30,3 +30,9 @@ services:
       DB_HOST: ${DB_HOST}
     depends_on:
       - db
+
+  web:
+    build: ./web
+    restart: always
+    ports:
+      - 3000:80
