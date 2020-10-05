@@ -21,19 +21,30 @@ An example CRUD app to list, search, add, edit and delete movies.
 
 `docker-compose up`
 
+### Shut down Docker
+
+`docker-compose down`
+
 ## Build Notes
 
 Here are some steps followed to develop
 
 * Initialize a project scaffold, some files generated with [starter-files](https://github.com/AndrewBell/starter-files)
 * `npm init`, create stubbed endpoints, and Docker support
+* Import test data from CSV via DataGrip
+    * Ideally, would import from CSV directly, but ran into challenges
+    * 16 rows failed to import due to missing record separators(?)
+    * As a workaround to importing the CSV directly, `2_insert_data.sql` was created from a sql data dump after uploading CSV in DataGrip
 
 ## References
 
 * [Express Documentation and Examples](https://expressjs.com/)
+* [Docker Compose](https://docs.docker.com/compose/)
 * [MySQL Docker](https://hub.docker.com/_/mysql)
 * [Dockerizing a Node.js App](https://nodejs.org/en/docs/guides/nodejs-docker-webapp/)
+* [MySQL npm](https://www.npmjs.com/package/mysql)
 
 ## Tools Used
 
 * IntelliJ IDEA Ultimate
+* DataGrip
