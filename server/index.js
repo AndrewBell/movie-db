@@ -2,6 +2,9 @@ const express = require('express')
 const app = express()
 const port = 8080
 const mysql = require('mysql');
+const cors = require('cors');
+
+app.use(cors());
 
 // Create DB connection based on env variables
 const connection = mysql.createConnection({

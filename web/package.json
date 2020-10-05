@@ -11,7 +11,7 @@
     "react-scripts": "3.4.3"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "REACT_APP_SERVER_HOST=localhost react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -32,6 +32,7 @@
     ]
   },
   "devDependencies": {
+    "axios": "^0.20.0",
     "bootstrap": "^4.5.2",
     "react-bootstrap": "^1.3.0"
   }
